@@ -14,8 +14,9 @@ pipeline {
         stage('start') {
             steps {
                 sh 'pwd'
-                dir('/opt/agent/workspace/sonar/bitcoin-wrapper') {
+                dir('/opt/agent/workspace/sonar/bitcoin-warner') {
                     sh 'pwd'
+                    sh 'ls'
                     sh "python3 warning.py"
                 }
             }
