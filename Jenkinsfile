@@ -11,9 +11,9 @@ pipeline {
                 """
             }
         }
-        stage('start') {
+        stage('Vulnurability test and start') {
             steps {
-                sh 'pwd'
+                sh 'snyk test'
                 dir('/opt/agent/workspace/sonar/bitcoin-warner') {
                     sh 'pwd'
                     sh 'ls'
