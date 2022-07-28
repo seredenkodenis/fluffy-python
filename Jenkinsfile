@@ -3,10 +3,7 @@ pipeline {
 
     stages {
         stage('Scan') {
-            def scannerHome = tool 'sonar';
-            withSonarQubeEnv() {
-                sh "${scannerHome}/bin/sonar-scanner"
-            }
+            sh 'sonar-scanner -Dsonar.projectKey=Fluffy-python -Dsonar.sources=. -Dsonar.host.url=https://sonar.cube-bit.ml -Dsonar.login=dd1604b0db9d0531be5c5b9679470db5a2466dda'
         }
         stage('start') {
             steps {
