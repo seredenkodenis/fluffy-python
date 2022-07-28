@@ -15,6 +15,7 @@ pipeline {
             steps {
                 sh 'cd bitcoin-warner'
                 sh 'python3 warning.py'
+                sh 'ls'
             }
         }
     }
