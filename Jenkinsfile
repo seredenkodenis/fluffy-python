@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Scan') {
             steps{
-                sh 'sonar-scanner -Dsonar.projectKey=Fluffy-python -Dsonar.sources=. -Dsonar.host.url=https://sonar.cube-bit.ml -Dsonar.login=dd1604b0db9d0531be5c5b9679470db5a2466dda'
+                sh 'sudo sonar-scanner -Dsonar.projectKey=Fluffy-python -Dsonar.sources=. -Dsonar.host.url=https://sonar.cube-bit.ml -Dsonar.login=dd1604b0db9d0531be5c5b9679470db5a2466dda'
             }
         }
         stage('start') {
