@@ -13,7 +13,9 @@ pipeline {
         }
         stage('start') {
             steps {
+                sh 'pwd'
                 sh 'cd bitcoin-warner'
+                sh 'pwd'
                 sh 'python3 warning.py'
                 sh 'ls'
             }
